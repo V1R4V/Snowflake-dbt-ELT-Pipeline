@@ -1,0 +1,3 @@
+SELECT DISTINCT TICKER, TRADE_DATE
+FROM {{ source('airbyte_csv_data', 'TRADING_BOOKS') }}
+WHERE DESK = 'FX Desk'

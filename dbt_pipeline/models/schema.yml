@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: airbyte_survey_data
+    database: SURVEY_DATABASE
+    schema: SURVEY_SCHEMA
+    tables:
+      - name: SURVEY
+
+  - name: snowflake_public_data
+    database: SNOWFLAKE_PUBLIC_DATA_FREE
+    schema: PUBLIC_DATA_FREE
+    tables:
+      - name: STOCK_PRICE_TIMESERIES_PIT
+      - name: FX_RATES_TIMESERIES_PIT
+
+  - name: airbyte_csv_data
+    database: STOCK_DB
+    schema: STOCK_SCHEMA
+    tables:
+      - name: TRADING_BOOKS
+      - name: WEIGHTS_TABLE

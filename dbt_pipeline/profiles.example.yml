@@ -1,0 +1,24 @@
+# Copy to ~/.dbt/profiles.yml. Credentials come from environment variables.
+elt_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ELT_ROLE
+      database: SURVEY_DATABASE
+      warehouse: ELT_WAREHOUSE
+      schema: SURVEY_SCHEMA
+      threads: 1
+    stock_db:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: ELT_ROLE
+      database: STOCK_DB
+      warehouse: ELT_WAREHOUSE
+      schema: STOCK_SCHEMA
+      threads: 1
