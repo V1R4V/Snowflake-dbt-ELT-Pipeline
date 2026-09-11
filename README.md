@@ -79,3 +79,7 @@ dbt run --target stock_db   # trading models
 The Snowflake setup SQL (warehouse, databases, role, grants, schemas) is in the notebook's setup section. Airbyte connections are configured in the Airbyte Cloud UI.
 
 > **Privacy:** the survey table contains respondent emails, so the notebook's row-level survey outputs are cleared and no raw survey data is committed.
+
+---
+
+*Date finished: April 18, 2026*
